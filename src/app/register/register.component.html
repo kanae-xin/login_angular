@@ -1,0 +1,47 @@
+<div class="container">
+  <div [hidden]="loginState">
+    <h1>Register</h1>
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" [(ngModel)]="form.userName" name="userName"
+               required #userName="ngModel">
+        <div
+          class="alert alert-danger"
+          role="alert"
+          *ngIf="userName.errors && (userName.dirty || userName.touched)"
+        >
+          Username is required!
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="pw">Pw</label>
+        <input type="password" class="form-control" [(ngModel)]="form.pw" name="pw" required
+                name="pw" #pw="ngModel">
+        <div
+          class="alert alert-danger"
+          role="alert"
+          *ngIf="pw.errors && (pw.dirty || pw.touched)"
+        >
+          Password is required!
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="repw">Re-enter Pw</label>
+        <input type="password" class="form-control" [(ngModel)]="form.repw" name="repw" required
+                name="repw" #repw="ngModel">
+        <div
+          class="alert alert-danger"
+          role="alert"
+          *ngIf="repw.errors && (repw.dirty || repw.touched)"
+        >
+          Password is required!
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-success" >Register</button>
+      <button type="button" onclick="window.location.href='/login'" class="btn btn-success" >Back to login</button>
+    </form>
+  </div>
+</div>

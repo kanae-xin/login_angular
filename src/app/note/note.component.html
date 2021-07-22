@@ -1,0 +1,23 @@
+<form (ngSubmit)="addmes()">
+	<div class="form-group">
+        <label for="content">content</label>
+        <input type="text" class="form-control" id="content" [(ngModel)]="content" name="content">
+        
+     </div>
+     <button type="submit" class="btn btn-success">Submit</button>
+</form>
+
+
+	<div class="contents" *ngFor="let mes of messages">
+		<div class="name">
+	      	<h1>{{mes.id}}</h1>
+	      </div>
+	      <div class="time">
+	      	<h1>{{mes.time}}</h1>
+	      </div>
+	      <br/><br/><br/>
+	      <div class="content">
+	      	{{mes.content}}
+	      </div>
+	      
+	 </div>

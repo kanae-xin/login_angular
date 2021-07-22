@@ -1,0 +1,19 @@
+.contents{
+	position: relative;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 10px;
+	border-style: solid;
+}
+.name{
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: auto;
+}
+.time{
+	position: absolute;
+	top: 0%;
+	left: 70%;
+	width: auto;
+}
